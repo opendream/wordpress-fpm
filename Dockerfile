@@ -1,6 +1,20 @@
-FROM php:7.1.2-fpm-alpine
+FROM php:7.1-fpm-alpine
 
 LABEL maintainer "Keng Susumpow"
+
+# Build-time metadata as defined at http://label-schema.org
+ ARG BUILD_DATE
+ ARG VCS_REF
+ ARG VERSION
+ LABEL org.label-schema.build-date=$BUILD_DATE \
+       org.label-schema.name="Wordpress-FPM" \
+       org.label-schema.description="A Docker container for latest version of PHP-FPM and Wordpress." \
+       org.label-schema.url="https://www.opendream.co.th/" \
+       org.label-schema.vcs-ref=$VCS_REF \
+       org.label-schema.vcs-url="https://github.com/opendream/wordpress-fpm" \
+       org.label-schema.vendor="Opendream Co., Ltd." \
+       org.label-schema.version=$VERSION \
+       org.label-schema.schema-version="1.0"
 
 ENV WP_ROOT /usr/src/wordpress
 ENV WP_VERSION 4.7.2
@@ -44,7 +58,3 @@ RUN curl -o wordpress.tar.gz -SL $WP_DOWNLOAD_URL \
 	  && echo "$WP_SHA1 *wordpress.tar.gz" | sha1sum -c - \
 	  && tar -xzf wordpress.tar.gz -C /usr/src/ \
 	  && rm wordpress.tar.gz
-
-RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
-    && chmod +x wp-cli.phar \
-    && mv wp-cli.phar /usr/local/bin/wp
