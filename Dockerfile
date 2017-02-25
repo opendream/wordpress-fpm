@@ -41,8 +41,6 @@ RUN apk add --no-cache --virtual .build-deps \
     && apk add --virtual .phpext-rundeps $runDeps \
     && apk del .build-deps
 
-RUN adduser -D deployer -s /bin/bash -G www-data
-
 RUN { \
         echo 'opcache.memory_consumption=128'; \
         echo 'opcache.interned_strings_buffer=8'; \
@@ -51,8 +49,6 @@ RUN { \
         echo 'opcache.fast_shutdown=1'; \
         echo 'opcache.enable_cli=1'; \
     } > /usr/local/etc/php/conf.d/opcache-recommended.ini
-
-VOLUME /var/www/html
 
 RUN curl -o wordpress.tar.gz -SL $WP_DOWNLOAD_URL \
 	  && echo "$WP_SHA1 *wordpress.tar.gz" | sha1sum -c - \

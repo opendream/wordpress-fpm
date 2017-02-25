@@ -3,10 +3,10 @@
 [![Docker Automated buil](https://img.shields.io/docker/automated/opendream/wordpress-fpm.svg)](https://hub.docker.com/r/opendream/wordpress-fpm/)
 
 # Wordpress-FPM
-A Docker container for latest version of PHP-FPM and Wordpress. 😏
+A lightweight (~55MB) Docker container for latest version of PHP-FPM and Wordpress. 🙏
 
 This image is based on PHP's [fpm-alpine image](https://hub.docker.com/_/php/) with additional PHP extensions: `gd` `mysqli` `opcache` and `imagick`. Additional extensions will be maintained at best effort.
 
 ## Version:
 
-* `latest` based on **Wordpress**: `4.7.2` and **PHP-FPM**: `7.1.2` [Dockerfile](https://github.com/opendream/wordpress-fpm/blob/master/Dockerfile)
+* `4.7.2` based on **Wordpress**: `4.7.2` and **PHP-FPM**: `7.1.2` ([Dockerfile])(https://github.com/opendream/wordpress-fpm/blob/master/Dockerfile)
