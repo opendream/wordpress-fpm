@@ -5,6 +5,8 @@
 # Wordpress-FPM
 A Docker container for latest version of PHP-FPM and Wordpress. 😏
 
-## Current version:
+This image is based on PHP's [fpm-alpine image](https://hub.docker.com/_/php/) with additional PHP extensions: `gd` `mysqli` `opcache` and `imagick`. Additional extensions will be maintained at best effort.
+
+## Version:
 
 * `latest` based on **Wordpress**: `4.7.2` and **PHP-FPM**: `7.1.2` [Dockerfile](https://github.com/opendream/wordpress-fpm/blob/master/Dockerfile)
