@@ -1,5 +1,7 @@
 FROM php:7.1.2-fpm-alpine
 
+LABEL maintainer "Keng Susumpow"
+
 ENV WP_ROOT /usr/src/wordpress
 ENV WP_VERSION 4.7.2
 ENV WP_SHA1 7b687f1af589c337124e6247229af209ec1d52c3
