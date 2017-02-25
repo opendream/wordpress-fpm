@@ -45,13 +45,6 @@ RUN curl -o wordpress.tar.gz -SL $WP_DOWNLOAD_URL \
 	  && tar -xzf wordpress.tar.gz -C /usr/src/ \
 	  && rm wordpress.tar.gz
 
-COPY wp-config.php $WP_ROOT
-RUN chown -R deployer:www-data $WP_ROOT \
-    && chmod 640 $WP_ROOT/wp-config.php
-
-COPY cron.conf /etc/crontabs/deployer
-RUN chmod 600 /etc/crontabs/deployer
-
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
     && chmod +x wp-cli.phar \
     && mv wp-cli.phar /usr/local/bin/wp
