@@ -1,6 +1,6 @@
 [![](https://images.microbadger.com/badges/image/opendream/wordpress-fpm.svg)](https://microbadger.com/images/opendream/wordpress-fpm)
 [![license](https://img.shields.io/github/license/opendream/wordpress-fpm.svg)](https://github.com/opendream/wordpress-fpm)
-[![Docker Automated buil](https://img.shields.io/docker/automated/opendream/wordpress-fpm.svg)](https://hub.docker.com/r/opendream/wordpress-fpm/)
+[![Docker Build Statu](https://img.shields.io/docker/build/opendream/wordpress-fpm.svg)]()
 
 # Wordpress-FPM
 A lightweight (~55MB) Docker container for latest version of PHP-FPM and Wordpress. 🙏
