@@ -18,11 +18,11 @@ LABEL maintainer "Keng Susumpow"
 
 ENV WP_ROOT /usr/src/wordpress
 ENV WP_VERSION 4.7.5
-ENV WP_SHA1 d54f2acca0b00b86de71d564d5ef1220e607b3b6
+ENV WP_SHA1 fbe0ee1d9010265be200fe50b86f341587187302
 ENV WP_DOWNLOAD_URL https://wordpress.org/wordpress-$WP_VERSION.tar.gz
 
 RUN apk add --no-cache --virtual .build-deps \
-    autoconf build-base gcc imagemagick-dev libc-dev \
+    autoconf build-base gcc imagemagick-dev libc-dev pcre-dev \
     libjpeg-turbo-dev libpng-dev libtool make \
     && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
     && docker-php-ext-install gd mysqli opcache \
