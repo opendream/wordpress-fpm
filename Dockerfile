@@ -17,8 +17,8 @@ LABEL maintainer "Keng Susumpow"
        org.label-schema.schema-version="1.0"
 
 ENV WP_ROOT /usr/src/wordpress
-ENV WP_VERSION 4.7.4
-ENV WP_SHA1 153592ccbb838cafa1220de9174ec965df2e9e1a
+ENV WP_VERSION 4.7.5
+ENV WP_SHA1 d54f2acca0b00b86de71d564d5ef1220e607b3b6
 ENV WP_DOWNLOAD_URL https://wordpress.org/wordpress-$WP_VERSION.tar.gz
 
 RUN apk add --no-cache --virtual .build-deps \

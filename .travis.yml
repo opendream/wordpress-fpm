@@ -1,0 +1,11 @@
+language: python
+python:
+  - 2.7
+  - 3.5
+services:
+  - docker
+install:
+  - docker build -t wordpress .
+  - docker run -d -p 127.0.0.1:80:80 --name wordpress wordpress
+script:
+  - docker ps | grep -q wordpress

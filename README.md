@@ -9,6 +9,6 @@ This image is based on PHP's [fpm-alpine image](https://hub.docker.com/_/php/) w
 
 ## Version:
 
-* `latest` based on **Wordpress**: `4.7.4` and **PHP-FPM**: `7.1.4`
+* `latest` based on **Wordpress**: `4.7.5`.
 
  ([Dockerfile](https://github.com/opendream/wordpress-fpm/blob/master/Dockerfile))
